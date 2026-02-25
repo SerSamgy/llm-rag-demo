@@ -9,7 +9,7 @@ dependencies = [
     "uvicorn[standard]",
     "pydantic>=2",
     "python-dotenv",
-    "rich"
+    "python-json-logger"
 ]
 [dependency-groups]
 dev = [
@@ -17,4 +17,5 @@ dev = [
     "pre-commit>=4.2.0",
     "pyrefly>=0.41.3",
     "ruff>=0.11.12",
+    "rich"
 ]

@@ -1,0 +1,21 @@
+version: 1
+disable_existing_loggers: False
+handlers:
+  default:
+    class: rich.logging.RichHandler
+    rich_tracebacks: True
+  access:
+    class: rich.logging.RichHandler
+    rich_tracebacks: True
+    # TODO: Check how can I add RichHandler options (e.g. tracebacks_suppress)
+loggers:
+  uvicorn.error:
+    level: INFO
+    handlers:
+      - default
+    propagate: no
+  uvicorn.access:
+    level: INFO
+    handlers:
+      - access
+    propagate: no

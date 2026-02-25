@@ -576,6 +576,15 @@ wheels = [
 ]
 
 [[package]]
+name = "python-json-logger"
+version = "4.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/29/bf/eca6a3d43db1dae7070f70e160ab20b807627ba953663ba07928cdd3dc58/python_json_logger-4.0.0.tar.gz", hash = "sha256:f58e68eb46e1faed27e0f574a55a0455eecd7b8a5b88b85a784519ba3cff047f", size = 17683, upload-time = "2025-10-06T04:15:18.984Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/51/e5/fecf13f06e5e5f67e8837d777d1bc43fac0ed2b77a676804df5c34744727/python_json_logger-4.0.0-py3-none-any.whl", hash = "sha256:af09c9daf6a813aa4cc7180395f50f2a9e5fa056034c9953aec92e381c5ba1e2", size = 15548, upload-time = "2025-10-06T04:15:17.553Z" },
+]
+
+[[package]]
 name = "python-multipart"
 version = "0.0.22"
 source = { registry = "https://pypi.org/simple" }
@@ -618,7 +627,7 @@ dependencies = [
     { name = "fastapi", extra = ["standard-no-fastapi-cloud-cli"] },
     { name = "pydantic" },
     { name = "python-dotenv" },
-    { name = "rich" },
+    { name = "python-json-logger" },
     { name = "uvicorn", extra = ["standard"] },
 ]
 
@@ -627,6 +636,7 @@ dev = [
     { name = "ipython" },
     { name = "pre-commit" },
     { name = "pyrefly" },
+    { name = "rich" },
     { name = "ruff" },
 ]
 
@@ -635,7 +645,7 @@ requires-dist = [
     { name = "fastapi", extras = ["standard-no-fastapi-cloud-cli"], specifier = ">=0.131.0" },
     { name = "pydantic", specifier = ">=2" },
     { name = "python-dotenv" },
-    { name = "rich" },
+    { name = "python-json-logger" },
     { name = "uvicorn", extras = ["standard"] },
 ]
 
@@ -644,6 +654,7 @@ dev = [
     { name = "ipython", specifier = ">=9.7.0" },
     { name = "pre-commit", specifier = ">=4.2.0" },
     { name = "pyrefly", specifier = ">=0.41.3" },
+    { name = "rich" },
     { name = "ruff", specifier = ">=0.11.12" },
 ]
 
