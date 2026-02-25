@@ -24,4 +24,4 @@ repos:
           - uvicorn[standard]
           - pydantic>=2
           - python-dotenv
-          - rich
+          - python-json-logger
