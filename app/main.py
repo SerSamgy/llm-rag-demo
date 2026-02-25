@@ -2,7 +2,7 @@ import os
 
 from fastapi import FastAPI
 
-app = FastAPI(title="llm-rag-demo")
+app = FastAPI(title="RAGDock")
 
 
 @app.get("/health")

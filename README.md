@@ -1,2 +1,2 @@
-# llm-rag-demo
+# RAGDock
 LLM RAG Demo Project

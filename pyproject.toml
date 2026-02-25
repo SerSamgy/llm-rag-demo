@@ -1,11 +1,15 @@
 [project]
-name = "llm-rag-demo"
+name = "ragdock"
 version = "0.1.0"
 description = "LLM RAG Demo Project"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "fastapi[standard-no-fastapi-cloud-cli]>=0.131.0",
+    "uvicorn[standard]",
+    "pydantic>=2",
+    "python-dotenv",
+    "rich"
 ]
 [dependency-groups]
 dev = [
