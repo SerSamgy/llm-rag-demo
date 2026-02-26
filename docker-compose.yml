@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/astral-sh/uv:python3.14-trixie-slim
+    image: ghcr.io/astral-sh/uv:python3.13-trixie-slim
     container_name: llm-rag-api
     working_dir: /app
     volumes:
@@ -10,3 +10,13 @@ services:
       - .env
     ports:
       - "8000:8000"
+  chromadb:
+    image: chromadb/chroma
+    container_name: llm-rag-chromadb
+    volumes:
+      - chroma_data:/data
+    ports:
+      - "8000:8000"
+
+volumes:
+  chroma_data:

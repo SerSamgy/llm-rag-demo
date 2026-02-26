@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     env: str = Field(default="local")
     log_level: str = Field(default="INFO")
 
+    chroma_host: str = Field(default="chromadb")
+    chroma_port: int = Field(default=8000)
+
 
 @lru_cache
 def get_settings() -> Settings:

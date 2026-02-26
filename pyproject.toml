@@ -3,13 +3,14 @@ name = "ragdock"
 version = "0.1.0"
 description = "LLM RAG Demo Project"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard-no-fastapi-cloud-cli]>=0.131.0",
     "uvicorn[standard]",
     "pydantic>=2",
     "python-dotenv",
-    "python-json-logger"
+    "python-json-logger",
+    "chromadb>=1.5.1",
 ]
 [dependency-groups]
 dev = [

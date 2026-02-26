@@ -25,3 +25,4 @@ repos:
           - pydantic>=2
           - python-dotenv
           - python-json-logger
+          - chromadb

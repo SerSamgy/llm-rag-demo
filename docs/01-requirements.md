@@ -19,7 +19,7 @@
 
 ## Constraints
 
-- Python 3.14
+- Python 3.13
 - FastAPI
 - Chroma vector DB
 - LangChain
