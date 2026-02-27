@@ -3,15 +3,15 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 
+class ErrorResponse(BaseModel):
+    detail: str
+    error_code: str | None = None
+
+
 class CollectionCreateRequest(BaseModel):
     tenant_id: str = Field(min_length=1)
     collection_name: str = Field(min_length=1)
-
-
-class CollectionCreateResponse(BaseModel):
-    collection_id: str
-    tenant_id: str
-    collection_name: str
+    metadata: dict[str, Any] = {}
 
 
 class IngestTextItem(BaseModel):
