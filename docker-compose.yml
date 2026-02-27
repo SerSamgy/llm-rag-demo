@@ -16,7 +16,7 @@ services:
     volumes:
       - chroma_data:/data
     ports:
-      - "8000:8000"
+      - "8001:8000"
 
 volumes:
   chroma_data:

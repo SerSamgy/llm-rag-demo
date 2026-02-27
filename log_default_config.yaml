@@ -33,3 +33,6 @@ loggers:
     handlers:
       - access
     propagate: no
+  root:
+      level: INFO
+      handlers: [default]

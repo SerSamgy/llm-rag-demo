@@ -3,19 +3,29 @@ disable_existing_loggers: False
 handlers:
   default:
     class: rich.logging.RichHandler
-    rich_tracebacks: True
+    level: DEBUG
+    rich_tracebacks: true
+    show_level: true
+    markup: true
+    show_path: true
   access:
     class: rich.logging.RichHandler
-    rich_tracebacks: True
-    # TODO: Check how can I add RichHandler options (e.g. tracebacks_suppress)
+    level: DEBUG
+    rich_tracebacks: true
+    show_level: false
+    markup: true
+    show_path: false
 loggers:
   uvicorn.error:
-    level: INFO
+    level: DEBUG
     handlers:
       - default
     propagate: no
   uvicorn.access:
-    level: INFO
+    level: DEBUG
     handlers:
       - access
     propagate: no
+root:
+    level: DEBUG
+    handlers: [default]
