@@ -1,18 +1,18 @@
 from functools import lru_cache
 
-from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    app_name: str = Field(default="RAGDock")
-    env: str = Field(default="local")
-    log_level: str = Field(default="INFO")
+    app_name: str = "RAGDock"
+    env: str = "local"
 
-    chroma_host: str = Field(default="chromadb")
-    chroma_port: int = Field(default=8000)
+    chroma_host: str = "chromadb"
+    chroma_port: int = 8000
+    chroma_tenant: str = "default_tenant"
+    chroma_database: str = "default_database"
 
 
 @lru_cache

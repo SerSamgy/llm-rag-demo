@@ -8,7 +8,12 @@ from app.api.dependencies.settings import SettingsDep
 
 
 def get_chroma_client(settings: SettingsDep) -> ClientAPI:
-    return HttpClient(host=settings.chroma_host, port=settings.chroma_port)
+    return HttpClient(
+        host=settings.chroma_host,
+        port=settings.chroma_port,
+        tenant=settings.chroma_tenant,
+        database=settings.chroma_database,
+    )
 
 
 type ChromaClientDep = Annotated[ClientAPI, Depends(get_chroma_client)]

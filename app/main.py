@@ -8,9 +8,7 @@ from app.core.config import get_settings
 
 settings = get_settings()
 
-is_debug = True if settings.log_level == "DEBUG" else False
-
-app = FastAPI(title=settings.app_name, debug=is_debug)
+app = FastAPI(title=settings.app_name)
 
 app.include_router(health_router)
 app.include_router(collections_router)
