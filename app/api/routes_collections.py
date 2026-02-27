@@ -43,6 +43,7 @@ router = APIRouter()
 )
 def create_collection(req: CollectionCreateRequest, repo: CollectionsRepoDep) -> None:
     key = CollectionKey(
+        # FIXME: Extract tenant_id from auth token instead!
         tenant_id=req.tenant_id,
         name=req.collection_name,
     )
